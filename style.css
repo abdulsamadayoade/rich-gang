@@ -55,7 +55,7 @@ section .top {
 
 .box {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: 6rem 1fr 1fr 8rem 8rem 1fr 1fr;
     gap: 1rem;
     padding: 0 2rem;
 }
