@@ -8,4 +8,5 @@ The data is gotten from an external API which make use of real time data from Fo
 
 ## Links
 Live URL = https://rich-gang.netlify.app/
+
 Link to the API = https://forbes400.herokuapp.com/
