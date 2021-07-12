@@ -1,6 +1,6 @@
 // GET THE DATA OF THE RICHEST PEOPLE VIA THE API
 function getData() {
-    return fetch('https://forbes400.herokuapp.com/api/forbes400?limit=10')
+    return fetch('https://forbes400.herokuapp.com/api/forbes400?limit=20')
     .then(response => response.json())
     .then(data => {
         return data;
@@ -21,15 +21,36 @@ function showData(lists) {
 
 
         listEL += `
-        <div class="box">
-            <div>${list.rank}</div>
-            <div>${list.person.name}</div>
-            <div>${list.finalWorth}</div>
-            <div>${age}</div>
-            <div>${list.gender}</div>
-            <div>${list.countryOfCitizenship}</div>
-            <div>${list.source}</div>
-        </div>
+            <div class="box">
+                <div>
+                    <span>s/n</span>
+                    ${list.rank}.
+                </div>
+                <div>
+                    <span>Name</span>
+                    ${list.person.name}
+                </div>
+                <div>
+                    <span>Net Worth</span>
+                    ${list.finalWorth}
+                </div>
+                <div>
+                    <span>Age</span>
+                    ${age}
+                </div>
+                <div>
+                    <span>Gender</span>
+                    ${list.gender}
+                </div>
+                <div>
+                    <span>Residence</span>
+                    ${list.countryOfCitizenship}
+                </div>
+                <div>
+                    <span>Source</span>
+                    ${list.source}
+                </div>
+            </div>
         `
     });
 
@@ -39,3 +60,13 @@ function showData(lists) {
 getData().then(data => {
     showData(data);
 });
+
+{/* <div class="box">
+<div>${list.rank}</div>
+<div>${list.person.name}</div>
+<div>${list.finalWorth}</div>
+<div>${age}</div>
+<div>${list.gender}</div>
+<div>${list.countryOfCitizenship}</div>
+<div>${list.source}</div>
+</div> */}

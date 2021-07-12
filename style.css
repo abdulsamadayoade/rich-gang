@@ -64,7 +64,17 @@ section .top {
     margin-bottom: 3rem;
 }
 
+.box span {
+    color: rgb(136, 130, 130);
+    font-size: 1.1rem;
+    display: none;
+}
+
 @media screen and (max-width: 700px) {
+    .box.box.header {
+        display: none;
+    }
+
     .box {
         grid-template-columns: 1fr;
         row-gap: 1rem;
@@ -73,6 +83,18 @@ section .top {
 
     .box:not(:last-child) {
         margin-bottom: 1rem;
+    }
+
+    .box div:not(:last-child) {
+        margin-bottom: 0;
+    }
+    
+    .box span {
+        display: block;
+        margin-bottom: .1rem;
+    }
+    .box div:first-child span {
+        display: none;
     }
 }
 
