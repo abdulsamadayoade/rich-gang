@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    background: #11121a;
+    color: #fff;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+section .container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+section .top {
+    background: #1c1c24;
+    height: 10rem;
+    margin-bottom: 3rem;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.top h1 {
+    font-size: 1.8rem;
+    margin-bottom: .5rem;
+}
+
+.top p {
+    font-size: 1.3rem;
+}
+
+.box.header {
+    background: #1c1c24;
+    border: 2px solid #222328;
+    align-items: center;
+    padding: 2rem;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1rem;
+    padding: 0 2rem;
+}
+
+.box:not(:last-child) {
+    margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 700px) {
+    .box {
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+        padding: 2rem;
+    }
+
+    .box:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .top h1 {
+        font-size: 1.6rem;
+    }
+}
